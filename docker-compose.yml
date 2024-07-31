@@ -1,0 +1,19 @@
+
+# criar uma pasta no diretorio atual com o nome do volume: mysql_data
+# para execultar ligue o docker e digite docker-compose up -d
+# para parar digite docker-compose down
+# os dados seram aramzenado em volumes na pasta criada mysql_data
+version: '3.1'
+
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_DATABASE=mydatabase
+      - MYSQL_USER=myuser
+      - MYSQL_PASSWORD=secret
+      - MYSQL_ROOT_PASSWORD=verysecret
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
