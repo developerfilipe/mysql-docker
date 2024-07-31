@@ -1,8 +1,8 @@
 
-# criar uma pasta no diretorio atual com o nome do volume: mysql_data
-# para execultar ligue o docker e digite docker-compose up -d
-# para parar digite docker-compose down
-# os dados seram aramzenado em volumes na pasta criada mysql_data
+# Crie um diretório chamado 'mysql_data' no diretório atual para armazenar os dados do MySQL.
+# Para iniciar os serviços, execute o Docker e digite: 'docker-compose up -d'.
+# Para parar os serviços, digite: 'docker-compose down'.
+# Os dados do MySQL serão armazenados no diretório 'mysql_data' através de volumes.
 version: '3.1'
 
 services:
